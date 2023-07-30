@@ -1,0 +1,83 @@
+.block {
+    width: 8px;
+    height: 72px;
+    background-color: $primary;
+    vertical-align: bottom;
+    @media screen and (max-width: 767px) {
+      height: 36px;
+    }
+  }
+  .title {
+    position: relative;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  
+.select-region {
+    label,
+    select {
+      vertical-align: middle;
+    }
+    select {
+      width: 308px;
+      height: 38px;
+      color: $gray;
+      @include borderStyle(#ced4da);
+    }
+    @media screen and (max-width: 767px) {
+      label {
+        font-size: 16px;
+        margin-right: 8px;
+      }
+      select {
+        width: 78%;
+      }
+    }
+  }
+  
+.store-list {
+    flex-wrap: wrap;
+    li {
+      width: 33.3%;
+      flex-direction: column;
+    }
+    h3 {
+      @include padding(8px, 0, 24px);
+      @include borderStyle(#00000020);
+    }
+    &-info {
+      @include padding(16px, 24px, 27px);
+      @include borderStyle(#00000020);
+      .icon {
+        margin-right: 10px;
+        vertical-align: middle;
+        margin-top: -5px;
+      }
+    }
+    a {
+      background-color: $black;
+      color: $white;
+      &:hover{
+        background-color: $primary;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      li {
+        width: 50%;
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          margin-top: 24px;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      li {
+        width: 100%;
+        &:nth-child(2) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }

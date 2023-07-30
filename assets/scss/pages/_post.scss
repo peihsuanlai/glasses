@@ -1,0 +1,85 @@
+.tabs {
+    a {
+      color: $black;
+    }
+    :last-child a {
+      color: $primary;
+    }
+  }
+  
+  .hashtags {
+    a {
+      color: $primary;
+    }
+  }
+  .post-content {
+    width: 66.04%;
+    .share {
+      a {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .article-nav {
+      border-top: 1px solid $black;
+      @include flexbox(row, stretch, space-between);
+      a {
+        color: $black;
+        &:hover {
+          color: $primary;
+        }
+      }
+      .icon {
+        vertical-align: middle;
+      }
+    }
+  }
+  .tags {
+    width: 21.6%;
+    color: $primary;
+    .icon {
+      vertical-align: middle;
+    }
+    a {
+      color: $primary;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .blog-nav {
+      a {
+        font-size: 16px;
+        @include padding(12px, 10px, 11px);
+      }
+      .icon {
+        display: none;
+      }
+    }
+    .hashtags {
+      a {
+        font-size: 16px;
+      }
+    }
+    .article {
+      h2 {
+        font-size: 24px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .post-content {
+      width: 100%;
+      .share,
+      .article-nav {
+        display: none;
+      }
+    }
+    .tags {
+      display: none;
+    }
+  }
+  

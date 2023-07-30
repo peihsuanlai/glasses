@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunglasses</title>
+  </head>
+  <body>
+    <%- include('./layout/nav'); -%>
+    <ul class="sun-tabs container d-flex">
+      <li>
+        <a href="./optical.html" class="py-24 fw-bold fs-32 ta-c">OPTICAL</a>
+      </li>
+      <li><a href="#" class="py-24 fw-bold fs-32 ta-c">SUNGLASSES</a></li>
+      <li><a href="#" class="py-24 fw-bold fs-32 ta-c">FUNCTIONAL</a></li>
+    </ul>
+    <section class="sun-banner d-flex">
+      <div class="img-container">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true
+            "
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true"
+            alt="glasses"
+          />
+        </picture>
+     
+      </div>
+      <div class="img-container">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true
+            "
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true"
+            alt="glasses"
+          />
+        </picture>
+   
+      </div>
+    </section>
+    <section class="sun-items container">
+      <h2 class="ta-c fs-42 fw-bold">2020 NEW COLLECTION</h2>
+      <h2 class="ta-c fs-32 mb-32">賽璐珞鈦金屬混合鏡框</h2>
+      <ul class="sun-cards">
+        <li class="mb-80">
+          <div class="img-container">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-7.png?raw=true"
+              alt="glasses"
+            />
+          </div>
+          <div class="info fs-24">
+            <h4>BJ41600S</h4>
+            <span class="fw-bold">NTD3,490</span>
+          </div>
+          <div class="color">
+            <button type="button" class="btn"></button
+            ><button type="button" class="btn"></button>
+          </div>
+        </li>
+        <li class="mb-80">
+          <div class="img-container">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-8.png?raw=true"
+              alt="glasses"
+            />
+          </div>
+          <div class="info fs-24">
+            <h4>BJ41600S</h4>
+            <span class="fw-bold">NTD3,490</span>
+          </div>
+          <div class="color">
+            <button type="button" class="btn"></button
+            ><button type="button" class="btn"></button>
+          </div>
+        </li>
+        <li class="mb-80">
+          <div class="img-container">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-9.png?raw=true"
+              alt="glasses"
+            />
+          </div>
+          <div class="info fs-24">
+            <h4>BJ41600S</h4>
+            <span class="fw-bold">NTD3,490</span>
+          </div>
+          <div class="color">
+            <button type="button" class="btn"></button
+            ><button type="button" class="btn"></button>
+          </div>
+        </li>
+        <li>
+          <div class="img-container">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-10.png?raw=true"
+              alt="glasses"
+            />
+          </div>
+          <div class="info fs-24">
+            <h4>BJ41600S</h4>
+            <span class="fw-bold">NTD3,490</span>
+          </div>
+          <div class="color">
+            <button type="button" class="btn"></button
+            ><button type="button" class="btn"></button>
+          </div>
+        </li>
+        <li>
+          <div class="img-container">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-11.png?raw=true"
+              alt="glasses"
+            />
+          </div>
+          <div class="info fs-24">
+            <h4>BJ41600S</h4>
+            <span class="fw-bold">NTD3,490</span>
+          </div>
+          <div class="color">
+            <button type="button" class="btn"></button
+            ><button type="button" class="btn"></button>
+          </div>
+        </li>
+        <li>
+          <div class="img-container">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-12.png?raw=true"
+              alt="glasses"
+            />
+          </div>
+          <div class="info fs-24">
+            <h4>BJ41600S</h4>
+            <span class="fw-bold">NTD3,490</span>
+          </div>
+          <div class="color">
+            <button type="button" class="btn"></button
+            ><button type="button" class="btn"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <%- include('./layout/pagnition'); -%>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

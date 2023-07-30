@@ -1,0 +1,281 @@
+.header {
+  @include bgImg(
+    "https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true"
+  );
+  height: 787px;
+  &-text {
+    @include flexbox(row, center, flex-end);
+    color: $secondary;
+    height: inherit;
+    text-align: right;
+    a {
+      padding: 6px 12px;
+      margin-top: 4px;
+      color: $white;
+      background-color: $primary;
+      &:hover{
+        color: $primary;
+        background-color: $white; 
+      }
+    }
+  }
+}
+
+.profession {
+  background-color: $pink;
+  h2 {
+    color: $secondary;
+  }
+  li {
+    width: 25%;
+    @include flexbox(column, center, flex-start);
+  }
+  .img-container {
+    width: 100px;
+    height: 100px;
+  }
+  h3 {
+    color: $secondary;
+  }
+}
+
+.classic {
+  padding: 80px 12px;
+  h2 {
+    color: $secondary;
+  }
+  li {
+    width: 33.3%;
+    &:hover{
+      transform: translateY(-20px);  
+    }
+  }
+}
+
+.cobranding {
+  @include bgImg(
+    "https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true"
+  );
+  height: 608px;
+  h2 {
+    color: $white;
+  }
+  li {
+    width: 50%;
+    h3 {
+      color: $primary;
+      background-color: $white;
+      padding: 8px 0;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.testimonial {
+  padding: 80px 12px;
+  h2 {
+    color: $secondary;
+  }
+  li {
+    width: 23.6%;
+    box-shadow: 0px 2px 6px #00000029;
+    .content {
+      padding: 24px;
+      p {
+        color: $black;
+      }
+      span {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: $pink;
+  h2 {
+    color: $secondary;
+  }
+  &-details {
+    width: 49.07%;
+  }
+  input:not(:last-of-type),
+  label:not(:last-of-type),
+  textarea {
+    width: 100%;
+  }
+  input,
+  textarea {
+    @include borderStyle($black);
+    padding: 6px 12px;
+    background-color: transparent;
+  }
+  .btn {
+    width: 416px;
+    padding: 16px 176px;
+    border: none;
+    color: $white;
+    background-color: $primary;
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    @include bgImg(
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true"
+    );
+  }
+  .profession .values {
+    flex-wrap: wrap;
+    @include flexbox(row, center, center);
+    li {
+      width: 50%;
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-top: 60px;
+      }
+    }
+  }
+  .classic {
+    .type {
+      width: 50%;
+      margin: 0 auto;
+      flex-direction: column;
+      li {
+        width: auto;
+        text-align: center;
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+  .cobranding {
+    height: 1020px;
+    .design {
+      flex-direction: column;
+      li {
+        width: 100%;
+        &:nth-child(2) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+  .testimonial {
+    .customer-cards {
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        width: 48%;
+        &:nth-child(2) {
+          margin-right: 0px;
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+  .contact {
+    &-details {
+      width: 75%;
+      h2 {
+        margin-bottom: 24px;
+      }
+      .btn {
+        width: 336px;
+        padding: 16px 136px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: 396px;
+    &-text {
+      h3 {
+        font-size: 16px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      a {
+        margin-top: 8px;
+      }
+    }
+  }
+  .profession {
+    padding: 40px 0;
+    h2 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    .values {
+      li {
+        width: 100%;
+        margin-top: 32px !important;
+      }
+    }
+  }
+  .classic {
+    padding: 40px 12px;
+    h2 {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+    .type {
+      width: 100%;
+      li {
+        h3 {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+  .cobranding {
+    height: 820px;
+    padding: 40px 0;
+    h2 {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+  }
+  .testimonial {
+    padding: 40px 12px;
+    h2 {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+    .customer-cards {
+      li {
+        width: 100%;
+      }
+      li:not(:first-child) {
+        margin-top: 16px !important;
+      }
+      li:nth-child(1),
+      li:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+  .contact {
+    &-details {
+      width: 100%;
+      h2 {
+        font-size: 24px;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

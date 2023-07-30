@@ -1,0 +1,20 @@
+@import "./base/reset";
+@import "./base/variable";
+@import "./base/base";
+@import "./base/mixin";
+@import "./base/utility";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp");
+
+@import "./layout/nav";
+@import "./layout/footer";
+@import "./layout/pagnition";
+
+@import "./pages/index";
+@import "./pages/optical";
+@import "./pages/sunglasses";
+@import "./pages/store";
+@import "./pages/branch";
+@import "./pages/faq";
+@import "./pages/blog";
+@import "./pages/post";

@@ -1,0 +1,62 @@
+.store {
+    @include flexbox(row, stretch, space-between);
+    &-detail {
+      width: 40.5%;
+    }
+    h3 {
+      @include padding(8px, 0, 24px);
+      @include borderStyle(#00000020);
+    }
+    &-info {
+      @include padding(16px, 24px, 27px);
+      @include borderStyle(#00000020);
+      .icon {
+        margin-right: 10px;
+        vertical-align: middle;
+        margin-top: -5px;
+      }
+    }
+    &-map {
+      width: 57.5%;
+      height: auto;
+    }
+  }
+
+
+  @media screen and (max-width: 992px) {
+    .store{   
+        flex-direction: column;
+        &-detail {
+          display: flex;
+          width: 100%;
+          margin-bottom: 24px;
+          img {
+            width: 50%;
+            margin-right: 24px;
+          }
+          .store-intro {
+            width: 50%;
+          }
+        }
+        &-map {
+          width: 100%;
+        }
+    } 
+ 
+  }
+
+  @media screen and (max-width: 767px) {
+    .store{
+        &-detail {
+            display: block;
+            width: 100%;
+            img {
+              width: inherit;
+            }
+            .store-intro {
+              width: inherit;
+            }
+          }
+    }
+    
+  }

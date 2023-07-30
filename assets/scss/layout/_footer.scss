@@ -1,0 +1,93 @@
+.footer {
+  background-color: $primary;
+  .top {
+    @include flexbox(row, flex-start, space-between);
+  }
+  .menu {
+    margin: 0 -24px;
+    a {
+      padding: 12px 24px;
+      color: $white;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+  .contact-info {
+    margin: 35px 0;
+    a {
+      color: $white;
+      .icon {
+        margin-right: 22px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .right {
+    a {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .bottom {
+    @include flexbox(row, stretch, space-between);
+    border-top: 1px solid $white;
+    p {
+      font-family: "Roboto", sans-serif;
+      color: $white;
+    }
+    a {
+      color: $white;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .footer {
+    padding-top: 24px;
+    .menu {
+      display: none;
+    }
+    .contact-info {
+      margin: 0;
+      margin-bottom: 24px;
+      a {
+        font-size: 16px;
+        .icon {
+          font-size: 24px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .right {
+      li:not(:last-child) {
+        margin-right: 8px;
+      }
+      a {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      font-size: 16px;
+      padding: 24px 0;
+      p {
+        margin-bottom: 8px;
+      }
+      a:first-child {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.opt-tabs {
+    li {
+      width: 33.3%;
+      a {
+        color: $black;
+        width: 100%;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        font-family: "Roboto", sans-serif;
+      }
+      &:first-child a {
+        position: relative;
+        &::after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          width: 100%;
+          height: 8px;
+          background-color: $primary;
+        }
+      }
+    }
+  }
+  
+  .opt-items {
+    padding: 80px 12px;
+    h2:nth-child(1) {
+      font-family: "Roboto", sans-serif;
+    }
+    .opt-cards {
+      @include flexbox(row, stretch, space-between);
+      flex-wrap: wrap;
+      li {
+        width: 24%;
+      }
+      .info {
+        font-family: "Roboto", sans-serif;
+        @include flexbox(row, stretch, space-between);
+        span {
+          color: $primary;
+        }
+      }
+      .btn {
+        width: 24px;
+        height: 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .btn:first-child {
+        background-color: #5f3e2d;
+        margin-right: 8px;
+      }
+      .btn:last-child {
+        background-color: #b75929;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .opt-tabs li a {
+      font-size: 24px;
+    }
+    .opt-items {
+      .opt-cards li {
+        width: 49%;
+        &:not(:nth-child(11), :nth-child(12)) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .opt-tabs {
+        padding: 0;
+        li a {
+          font-size: 16px;
+        }
+      }
+      .opt-items {
+        padding: 40px 12px 64px 12px;
+        h2 {
+          font-size: 24px !important;
+        }
+        .opt-cards li {
+          width: 100%;
+          &:not(:nth-child(12)) {
+            margin-bottom: 24px;
+          }
+        }
+      }
+  }

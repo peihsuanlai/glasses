@@ -1,0 +1,26 @@
+@mixin flexbox($direction, $vertical, $horizontal) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $vertical;
+    justify-content: $horizontal;
+  }
+  
+  @mixin logo {
+    text-indent: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  @mixin bgImg($url) {
+    background-image: url($url);
+    background-size: cover;
+  }
+  
+  @mixin borderStyle($color) {
+    border: 1px solid $color;
+  }
+  
+  @mixin padding($x, $right, $left) {
+    padding: $x $right $x $left;
+  }
+  

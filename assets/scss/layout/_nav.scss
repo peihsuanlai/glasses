@@ -1,0 +1,58 @@
+.navbar {
+  @include flexbox(row, center, space-between);
+  @include padding(12px, 12px, 12px);
+  h1 a {
+    @include bgImg("../images/logo-2.png");
+
+    width: 80px;
+    height: 49px;
+    @include logo;
+  }
+  .menu {
+    a {
+      @include padding(12px, 32px, 32px);
+      color: $white;
+      &:hover{
+        color:$secondary;
+      }
+    }
+    li:last-child a {
+      padding-right: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    h1 a {
+      @include bgImg("../images/logo-1.png");
+    }
+  }
+  }
+
+@media screen and (max-width: 767px) {
+    .navbar {
+      width: 100%;
+      flex-direction: column;
+      padding: 0 0px;
+      h1 {
+        width: 100%;
+        padding: 0 12px;
+        margin: 16px 0;
+      }
+      .menu {
+        width: 100%;
+        flex-wrap: wrap;
+        li {
+          width: 50%;
+          @include borderStyle($white);
+          border-bottom: none;
+          text-align: center;
+          &:last-child a {
+            padding-right: 32px;
+          }
+        }
+      }
+    }
+    }

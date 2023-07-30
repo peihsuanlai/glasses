@@ -1,0 +1,102 @@
+.blog-nav {
+    @include flexbox(row, center, space-between);
+    color: $white;
+    a {
+      color: $white;
+      @include padding(13px, 24px, 24px);
+      &:hover {
+        color: $primary;
+      }
+    }
+    li:first-child a {
+      padding-left: 0;
+    }
+  }
+  
+  .posts {
+    .post {
+      @include flexbox(row, stretch, space-between);
+    }
+    .img-container {
+      width: 49.07%;
+      height: 100%;
+    }
+    .des {
+      width: 49.07%;
+      @include flexbox(column, stretch, flex-start);
+      h3 {
+        color: $secondary;
+      }
+      .post-info {
+        @include flexbox(row, stretch, space-between);
+        h4 {
+          color: $black;
+        }
+        span {
+          color: $gray;
+        }
+      }
+      p {
+        color: $gray;
+        flex-grow: 1;
+        :last-child {
+          display: none;
+        }
+      }
+    }
+    a {
+      color: $secondary;
+      align-self: flex-end;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .posts {
+      h3 {
+        font-size: 24px;
+      }
+      .post-info {
+        margin-bottom: 4px;
+      }
+      h4,
+      p {
+        font-size: 16px;
+      }
+      p {
+        :first-child {
+          display: none;
+        }
+        :last-child {
+          display: initial;
+        }
+      }
+      a {
+        display: none;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .blog-bg-dark {
+      display: none;
+    }
+    .posts .post {
+      flex-direction: column;
+      .img-container,
+      .des {
+        width: 100%;
+      }
+      .img-container {
+        margin-bottom: 8px;
+      }
+      .post-info {
+        margin-bottom: 0;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
