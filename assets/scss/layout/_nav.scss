@@ -33,7 +33,7 @@
 
 @media screen and (max-width: 767px) {
     .navbar {
-      width: 100%;
+      max-width: initial;
       flex-direction: column;
       padding: 0 0px;
       h1 {

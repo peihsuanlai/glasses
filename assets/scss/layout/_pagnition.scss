@@ -21,6 +21,7 @@
         color: $white;
       }
     }
+   
   }
 
 
@@ -34,6 +35,21 @@
         &:last-child a {
           font-size: 16px;
           padding: 12px 15px;
+        }
+      }
+  }
+
+
+@media screen and (max-width: 375px){
+    .pagnition li {
+        a {
+          font-size: 14px;
+          padding: 8px 10px;
+        }
+        &:first-child a,
+        &:last-child a {
+          font-size: 14px;
+          padding: 8px 8px;
         }
       }
   }
