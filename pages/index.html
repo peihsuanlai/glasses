@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Glasses</title>
   </head>
   <body>
@@ -17,7 +18,7 @@
         </div>
       </div>
     </header>
-    <section class="profession py-80">
+    <section class="profession py-80" data-aos="fade-up">
       <div class="container">
         <h2 class="mb-32 fs-48 fw-bold ta-c">用專業的心，做專業的事</h2>
         <ul class="values d-flex mx--12">
@@ -73,7 +74,7 @@
         </ul>
       </div>
     </section>
-    <section class="classic container">
+    <section class="classic container" data-aos="fade-up">
       <h2 class="fw-bold fs-48 mb-48 ta-c">經典系列鏡框</h2>
       <ul class="type d-flex mx--12">
         <li class="px-12">
@@ -114,7 +115,7 @@
         </li>
       </ul>
     </section>
-    <section class="cobranding py-80">
+    <section class="cobranding py-80" data-aos="fade-up">
       <div class="container">
         <h2 class="fw-bold fs-48 mb-48 ta-c">聯名設計鏡框</h2>
         <ul class="design d-flex">
@@ -157,9 +158,9 @@
         </ul>
       </div>
     </section>
-    <section class="testimonial container">
+    <section class="testimonial container" data-aos="fade-up">
       <h2 class="fs-48 fw-bold mb-48 ta-c">顧客推薦</h2>
-      <ul class="customer-cards d-flex">
+      <ul class="customer-cards d-flex" data-aos="fade-up">
         <li class="mr-24">
           <a href="#">
             <div class="img-container">
@@ -226,7 +227,7 @@
         </li>
       </ul>
     </section>
-    <section class="contact py-80">
+    <section class="contact py-80" data-aos="fade-up">
       <div class="container contact-details">
         <h2 class="fs-48 fw-bold mb-48 ta-c">聯絡我們</h2>
         <p class="mb-24 fs-20">
@@ -276,7 +277,7 @@
           >
           <button
             type="submit"
-            class="d-block mx-auto mt-48 btn"
+            class="d-block mx-auto mt-48 btn fs-18"
             id="contact-form"
           >
             確認送出
@@ -284,8 +285,14 @@
         </form>
       </div>
     </section>
- 
+
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 270,
+      });
+    </script>
   </body>
 </html>

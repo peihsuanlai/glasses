@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>門市據點</title>
   </head>
   <body>
@@ -71,7 +72,7 @@
             
             <a href="#" class="fs-19 py-16 ta-c">詳細資訊</a>
         </li>
-        <li class="mt-48 px-12 d-flex">
+        <li class="mt-48 px-12 d-flex" data-aos="fade-up">
             <div class="img-container"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/store-4.png?raw=true" alt="store"></div>
             <h3 class="fs-24">高雄中正形象店</h3>
             <div class="store-info fs-20">
@@ -87,7 +88,7 @@
            
             <a href="#" class="fs-19 py-16 ta-c">詳細資訊</a>
         </li>
-        <li class="mt-48 px-12 d-flex">
+        <li class="mt-48 px-12 d-flex" data-aos="fade-up">
             <div class="img-container">
                 <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/store-5.png?raw=true" alt="store">
             </div>
@@ -118,5 +119,11 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 350,
+      });
+    </script>
   </body>
 </html>
